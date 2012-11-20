@@ -1,0 +1,14 @@
+{
+  "name": "startScreen",
+  "description": "Стартовый экран",
+  "main": "startScreen.js",
+  "double": {
+  	"clientScripts": [],
+  	"components": [],
+  	"modules": []
+  },
+  "private": true,
+  "dependencies": {
+    "async": "*",
+  }
+}

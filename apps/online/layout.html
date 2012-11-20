@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/app.css">
+    {{#each clientScripts}}
+      <script src="{{this}}"></script>
+    {{/each}}
+    <script>
+      var pipeline = {{{pipeline}}};
+      var bootstrap = require('/core/clientBootstrap.js');
+      bootstrap.run(pipeline);
+    </script>
+  </head>
+  <body>
+    {{{content}}}
+
+    {{#each templates}}
+		<script id="{{id}}" type="text/x-handlebars-template">
+		  {{{html}}}
+		</script>
+	{{/each}}
+  </body>
+</html>
